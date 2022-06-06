@@ -8,7 +8,7 @@ from click import command
 s = socket.socket()
 host = socket.gethostname()
 port = 5665
-s.blind(('', port))
+s.bind(('', port))
 s.listen()
 conn, addr = s.accept()
 print(addr,"is connected to server")
